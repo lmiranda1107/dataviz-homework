@@ -1,6 +1,6 @@
-Pyber Ride Sharing Analysis
+# Pyber Ride Sharing Analysis
 
-Visible Trends
+## Visible Trends
 1. Based on the scatterplot, there seems to be an overall direct relationship between driver count and number of rides per city. Given that the size of the circles in the scatter plot correlates with the driver count per city, one can see that in Urban areas there are significantly more drivers available and therefore more rides to offer to customers. In comparison with Rural areas where the plots are significantly smaller (indicating low driver count) and there are also less number if rides reported. 
 
 2. Rural areas - there is an important distinction to make for Rural areas given that there is a low count of drivers per city and the fare costs are above average in comparison to other city types. A few variables can account for this relationship between driver volume and fare cost such as: 
