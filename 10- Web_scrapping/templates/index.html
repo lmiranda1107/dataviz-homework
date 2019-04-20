@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mars Weather App</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/Users/bobbytaylor/Desktop/mars_web_application/static/css/style.css') }}">
+
+    <!-- CSS -->
+    <style media="screen" type="text/css">
+    body{background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/12/54/90563eb1cc5ee2d.jpg);
+      }
+      #jumbo {background-image: url(https://png.pngtree.com/thumb_back/fw800/back_pic/00/12/54/90563eb1cc5ee2d.jpg) }
+      #text-color { color:white;}
+      #padding{ padding-left: 12%;}
+      </style>
+</head>
+
+    <!-- HTML Body -->
+
+<body>
+
+    <div class="container-fluid">
+      <div class="jumbotron text-center" id="jumbo" > 
+          <h1 style="margin-bottom:40px;" id="text-color"> Misson To Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div> 
+
+    <!-- Latest News -->   
+      <div class="container-fluid">
+          <ul style="list-style: none;">
+             <h1 id="text-color">Latest News:</h1>
+              {%for news in news_dict%}
+                <li id="text-color"><h3 >{{news.Title}}</h3>{{ news.Details}}</li>
+              {% endfor %}
+          </ul>
+      </div>
+
+    <!-- Featured Mars Image --> 
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-6">
+        <h3 id="text-color" style="margin-bottom:4%;">Featured Mars Image</h3>
+        {%for image in ft_img_dict%}
+        <img src="{{image.image}}" alt="">
+        {% endfor %}  
+      </div>
+
+       <!-- Current Weather On Mars -->
+          <div class="col-md-5" style="border: 4px solid white; margin-top:6%">
+              <h3 id="text-color"> <u> Current Weather On Mars</u></h3>
+              {%for weather in mars_weather_dict%}
+              <p id="text-color">{{weather.mars_weather}} </p>
+              {% endfor %} <br>
+
+          </div>
+          
+
+        <!--TABLE--> 
+          <div class="col-md-5" >
+              <h3 id="text-color"> <u> Mars Facts</u></h3>
+              
+              <div>
+                <table border="1" id="text-color" class="dataframe">
+                    <thead>
+                      <tr style="text-align: right;">
+                        <th>Parameters</th>
+                        <th>Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Equatorial Diameter:</td>
+                        <td>6,792 km</td>
+                      </tr>
+                      <tr>
+                        <td>Polar Diameter:</td>
+                        <td>6,752 km</td>
+                      </tr>
+                      <tr>
+                        <td>Mass:</td>
+                        <td>6.42 x 10^23 kg (10.7% Earth)</td>
+                      </tr>
+                      <tr>
+                        <td>Moons:</td>
+                        <td>2 (Phobos &amp; Deimos)</td>
+                      </tr>
+                      <tr>
+                        <td>Orbit Distance:</td>
+                        <td>227,943,824 km (1.52 AU)</td>
+                      </tr>
+                      <tr>
+                        <td>Orbit Period:</td>
+                        <td>687 days (1.9 years)</td>
+                      </tr>
+                      <tr>
+                        <td>Surface Temperature:</td>
+                        <td>-153 to 20 °C</td>
+                      </tr>
+                      <tr>
+                        <td>First Record:</td>
+                        <td>2nd millennium BC</td>
+                      </tr>
+                      <tr>
+                        <td>Recorded By:</td>
+                        <td>Egyptian astronomers</td>
+                      </tr>
+                    </tbody>
+                  </table>  
+              </div>
+          </div>
+   </div>
+
+  </div>  
+  
+  <!-- IMAGES 1 -->
+  <div class="container-fluid">
+    <h1 style="text-align: center;" id="text-color">  <u> Mars Hemispheres</u> </h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5" style="margin:10px;" id= "padding" >
+            <img src="https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg" height="50%" width="100%" alt="">    
+            <figcaption id="text-color"> Cerberus Hemisphere  </figcaption>
+
+          </div>
+        <div class="col-md-5" style="margin:10px;" id= "padding">
+        <img src="https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full" height="50%" width="100%" alt="">
+        <figcaption id="text-color"> Schiaparelli Hemisphere  </figcaption>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- IMAGES 2 -->
+  <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5" style="margin:10px" id= "padding">
+              <img src="https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg" height="50%" width="100%" alt=""> 
+              <figcaption id="text-color"> Syrtis Major Hemisphere  </figcaption>
+            </div>
+          
+  
+          <div class="col-md-5" style="margin:10px"id= "padding">
+              <img src="https://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg" height="50%" width="100%" alt="">
+              <figcaption id="text-color"> Valles Marineris Hemisphere  </figcaption>
+
+          </div>
+        </div>
+      </div>
+  </div>
+       
+      <div class="height" style="height:60px;"></div> 
+  
+</body>
+</html>
