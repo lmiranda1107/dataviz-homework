@@ -1,7 +1,5 @@
 # Mission To Mars
 
-![mars](https://miami.bootcampcontent.com/Miami-Boot-Camp/MIACOR201901DATA3/raw/master/12-Web-Scraping-and-Document-Databases/Homework/Instructions/Images/mission_to_mars.jpg)
-
 ### In this assignment, we were tasked with building a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
 ### The following is a summary of the steps followed:
