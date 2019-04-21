@@ -1,4 +1,10 @@
-## In this assignment, we were tasked with building a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
+# Mission To Mars
+
+![mars](https://miami.bootcampcontent.com/Miami-Boot-Camp/MIACOR201901DATA3/raw/master/12-Web-Scraping-and-Document-Databases/Homework/Instructions/Images/mission_to_mars.jpg)
+
+### In this assignment, we were tasked with building a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
+
+### The following is a summary of the steps followed:
 
 ### Step 1 - Scraping
 The scrapping was performed in a Jupyter Notebook called mission_to_mars.ipynb.
@@ -19,6 +25,7 @@ Five Websites were scrapped:
 6. Created a root route / to query Mongo database and pass the mars data into an HTML template that displays the data.
 7. Created a template HTML file called index.html that takes the mars data dictionary and display all of the data in the appropriate HTML elements.
 
+## Final Product
 
 
 
