@@ -9,6 +9,5 @@ Your first task is to visualize an earthquake data set.
 
 
 
-
 Result:
 ![image](https://user-images.githubusercontent.com/45187198/57962776-588f2500-78e9-11e9-855f-2a94000f7349.png)
