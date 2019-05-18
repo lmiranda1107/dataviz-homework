@@ -7,6 +7,7 @@
 /// * Note: You'll need to use python -m http.server to run the visualization. This will host the page at localhost:8000 in your web browser. 
 
 // Image dimensions - From day 3, act 9
+// @TODO: YOUR CODE HERE!
 
 // Define SVG attributes
 var width = parseInt(d3.select('#scatter')
